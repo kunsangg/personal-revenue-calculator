@@ -16,6 +16,7 @@ import {
   Tooltip,
   CartesianGrid,
 } from "recharts";
+import { ChartContainer } from "@/components/charts/chart-container";
 
 const performanceData = [
   { day: "Mon", roas: 2.8, spend: 3200 },
@@ -82,7 +83,8 @@ export default function AdsAnalyzerPage() {
           <CardTitle>7-Day ROAS Performance</CardTitle>
         </CardHeader>
         <CardContent>
-          <ResponsiveContainer width="100%" height={260}>
+          <ChartContainer height={260}>
+          <ResponsiveContainer width="100%" height="100%">
             <LineChart data={performanceData}>
               <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.06)" />
               <XAxis dataKey="day" stroke="#71717a" fontSize={12} />
@@ -91,6 +93,7 @@ export default function AdsAnalyzerPage() {
               <Line type="monotone" dataKey="roas" stroke="#6366f1" strokeWidth={2} dot={{ fill: "#6366f1" }} name="ROAS" />
             </LineChart>
           </ResponsiveContainer>
+          </ChartContainer>
           {!outputs.isProfitable && (
             <p className="mt-4 text-sm text-amber-400">
               Recommendation: Do not scale budget until ROAS exceeds break-even (

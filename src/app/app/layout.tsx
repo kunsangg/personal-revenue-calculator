@@ -14,15 +14,17 @@ export default function AppLayout({
 
   return (
     <TooltipProvider delayDuration={200}>
-      <div className="min-h-screen gradient-mesh">
+      <div className="min-h-screen min-h-[100dvh] gradient-mesh">
         <Sidebar />
         <MobileNav />
         <main
-          className={`min-h-screen pb-20 transition-all lg:pb-0 ${
-            sidebarCollapsed ? "lg:pl-0" : "lg:pl-64"
-          }`}
+          className={`min-h-screen min-h-[100dvh] transition-all
+            pt-[calc(3.5rem+env(safe-area-inset-top,0px))]
+            pb-[calc(4.5rem+env(safe-area-inset-bottom,0px))]
+            lg:pt-0 lg:pb-0
+            ${sidebarCollapsed ? "lg:pl-0" : "lg:pl-64"}`}
         >
-          <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 lg:py-8">
+          <div className="mx-auto max-w-7xl px-3 py-4 sm:px-6 sm:py-6 lg:px-8 lg:py-8">
             {children}
           </div>
         </main>

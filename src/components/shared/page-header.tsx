@@ -13,17 +13,21 @@ export function PageHeader({ title, description, actions }: PageHeaderProps) {
     <motion.div
       initial={{ opacity: 0, y: -8 }}
       animate={{ opacity: 1, y: 0 }}
-      className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between"
+      className="mb-6 sm:mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between"
     >
-      <div>
-        <h1 className="text-2xl font-semibold tracking-tight text-zinc-50 sm:text-3xl">
+      <div className="min-w-0 pr-12 lg:pr-0">
+        <h1 className="text-xl font-semibold tracking-tight text-zinc-50 sm:text-2xl lg:text-3xl">
           {title}
         </h1>
         {description && (
           <p className="mt-1 text-sm text-zinc-400 max-w-2xl">{description}</p>
         )}
       </div>
-      {actions && <div className="flex flex-wrap gap-2">{actions}</div>}
+      {actions && (
+        <div className="flex w-full flex-col gap-2 sm:w-auto sm:flex-row sm:flex-wrap">
+          {actions}
+        </div>
+      )}
     </motion.div>
   );
 }

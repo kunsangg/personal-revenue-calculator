@@ -36,6 +36,32 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) for the landing page, or [http://localhost:3000/app/dashboard](http://localhost:3000/app/dashboard) for the app.
 
+## Deploy on Vercel
+
+1. Push this repo to GitHub: [kunsangg/personal-revenue-calculator](https://github.com/kunsangg/personal-revenue-calculator)
+2. Go to [vercel.com/new](https://vercel.com/new) and import the repository
+3. Vercel auto-detects **Next.js** — no custom build settings needed
+4. (Optional) Add environment variable:
+   - `NEXT_PUBLIC_APP_URL` = your production URL (e.g. `https://your-app.vercel.app`)
+5. Click **Deploy**
+
+Or use the CLI:
+
+```bash
+npm i -g vercel
+vercel
+```
+
+The app deploys to region `bom1` (Mumbai) by default via `vercel.json` for lower latency for Indian users.
+
+### Mobile
+
+- Responsive layout with sticky header, bottom tab bar, and full module drawer
+- iOS safe-area support (notch / home indicator)
+- Touch-friendly 48px+ tap targets
+- Charts scroll horizontally on small screens
+- Add to Home Screen supported via web manifest
+
 ## Project Structure
 
 ```

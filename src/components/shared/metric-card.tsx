@@ -42,7 +42,7 @@ export function MetricCard({
       whileHover={{ y: -2 }}
       transition={{ type: "spring", stiffness: 400, damping: 25 }}
       className={cn(
-        "group relative overflow-hidden rounded-xl border border-white/[0.08] bg-white/[0.03] p-5 backdrop-blur-xl transition-colors hover:border-white/15 hover:bg-white/[0.05]",
+        "group relative overflow-hidden rounded-xl border border-white/[0.08] bg-white/[0.03] p-4 sm:p-5 backdrop-blur-xl transition-colors hover:border-white/15 hover:bg-white/[0.05]",
         variant === "profit" && "border-emerald-500/20",
         variant === "loss" && "border-red-500/20"
       )}
@@ -53,7 +53,7 @@ export function MetricCard({
       </p>
       <p
         className={cn(
-          "mt-2 text-2xl font-semibold tracking-tight text-zinc-50",
+          "mt-2 text-xl sm:text-2xl font-semibold tracking-tight text-zinc-50",
           variant === "profit" && "text-emerald-400",
           variant === "loss" && "text-red-400"
         )}

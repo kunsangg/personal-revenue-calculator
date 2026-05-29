@@ -17,6 +17,7 @@ import {
   CartesianGrid,
   Cell,
 } from "recharts";
+import { ChartContainer } from "@/components/charts/chart-container";
 
 const riskColors = {
   safe: "#10b981",
@@ -79,7 +80,8 @@ export default function ScalingPage() {
           <CardTitle>Profit by Scale Level</CardTitle>
         </CardHeader>
         <CardContent>
-          <ResponsiveContainer width="100%" height={300}>
+          <ChartContainer height={300}>
+          <ResponsiveContainer width="100%" height="100%">
             <BarChart data={chartData}>
               <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.06)" />
               <XAxis dataKey="name" stroke="#71717a" fontSize={12} />
@@ -92,6 +94,7 @@ export default function ScalingPage() {
               </Bar>
             </BarChart>
           </ResponsiveContainer>
+          </ChartContainer>
         </CardContent>
       </Card>
 

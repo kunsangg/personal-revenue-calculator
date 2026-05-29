@@ -88,8 +88,8 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-zinc-950 overflow-hidden">
       {/* Nav */}
-      <header className="fixed top-0 z-50 w-full border-b border-white/[0.06] bg-zinc-950/80 backdrop-blur-xl">
-        <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
+      <header className="fixed top-0 z-50 w-full border-b border-white/[0.06] bg-zinc-950/80 backdrop-blur-xl safe-top">
+        <div className="mx-auto flex h-14 sm:h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
           <div className="flex items-center gap-2">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600">
               <Zap className="h-4 w-4 text-white" />
@@ -115,7 +115,7 @@ export default function LandingPage() {
       </header>
 
       {/* Hero */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6">
+      <section className="relative pt-24 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-6">
         <div className="absolute inset-0 gradient-mesh pointer-events-none" />
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-indigo-500/10 blur-[120px]" />
 

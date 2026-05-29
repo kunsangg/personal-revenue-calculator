@@ -9,6 +9,7 @@ import {
   Legend,
 } from "recharts";
 import type { ExpenseBreakdown } from "@/types";
+import { ChartContainer } from "./chart-container";
 
 interface ExpensePieChartProps {
   data: ExpenseBreakdown[];
@@ -16,7 +17,8 @@ interface ExpensePieChartProps {
 
 export function ExpensePieChart({ data }: ExpensePieChartProps) {
   return (
-    <ResponsiveContainer width="100%" height={280}>
+    <ChartContainer height={280}>
+    <ResponsiveContainer width="100%" height="100%">
       <PieChart>
         <Pie
           data={data}
@@ -51,5 +53,6 @@ export function ExpensePieChart({ data }: ExpensePieChartProps) {
         />
       </PieChart>
     </ResponsiveContainer>
+    </ChartContainer>
   );
 }

@@ -22,6 +22,7 @@ import {
   Tooltip,
   CartesianGrid,
 } from "recharts";
+import { ChartContainer } from "@/components/charts/chart-container";
 
 export default function DashboardPage() {
   const profitInputs = useProfitStore((s) => s.profitInputs);
@@ -140,7 +141,8 @@ export default function DashboardPage() {
             <CardTitle>Monthly Projections</CardTitle>
           </CardHeader>
           <CardContent>
-            <ResponsiveContainer width="100%" height={240}>
+            <ChartContainer height={240}>
+            <ResponsiveContainer width="100%" height="100%">
               <BarChart data={projectionData}>
                 <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.06)" />
                 <XAxis dataKey="month" stroke="#71717a" fontSize={12} tickLine={false} />
@@ -161,6 +163,7 @@ export default function DashboardPage() {
                 <Bar dataKey="projected" fill="#10b981" radius={[4, 4, 0, 0]} name="Projected" opacity={0.7} />
               </BarChart>
             </ResponsiveContainer>
+            </ChartContainer>
           </CardContent>
         </Card>
       </motion.div>

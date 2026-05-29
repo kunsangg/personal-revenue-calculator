@@ -30,12 +30,13 @@ export default function ProfitCalculatorPage() {
         description="Calculate per-order and monthly profitability with all Indian ecommerce costs."
         actions={
           <>
-            <Button variant="outline" size="sm" onClick={handleSave}>
+            <Button variant="outline" size="sm" className="w-full sm:w-auto" onClick={handleSave}>
               <Save className="h-4 w-4" />
               Save Scenario
             </Button>
             <Button
               size="sm"
+              className="w-full sm:w-auto"
               onClick={() => exportProfitReport(profitInputs, outputs)}
             >
               <Download className="h-4 w-4" />
